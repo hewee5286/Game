@@ -2,6 +2,9 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+const ambient = document.getElementById("ambient");
+const heartbeat = document.getElementById("heartbeat");
+const screech = document.getElementById("screech");
 
 let player = { x: 100, y: 100, size: 20, speed: 2 };
 let monster = { x: 300, y: 300, size: 30, speed: 1 };
