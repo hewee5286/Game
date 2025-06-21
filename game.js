@@ -75,13 +75,15 @@ function updateGame() {
   }
 
   if (checkCollision(player, monster)) {
-    if (hasGun) {
-      alert("You shot the monster and survived!");
-    } else {
-      alert("You were caught by the monster!");
-    }
-    gameOver = true;
+  if (hasGun) {
+    alert("You shot the monster and survived!");
+  } else {
+    screech.play();
+    alert("You were caught by the monster!");
   }
+  gameOver = true;
+}
+
 
   requestAnimationFrame(updateGame);
 }
