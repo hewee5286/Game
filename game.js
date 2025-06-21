@@ -90,4 +90,14 @@ setInterval(() => {
   monster.speed += 0.2;
 }, 5000);
 
-updateGame();
+updateGame(let distance = Math.sqrt(
+  (player.x - monster.x) ** 2 + (player.y - monster.y) ** 2
+);
+
+if (distance < 300) {
+  heartbeat.volume = 1;
+  heartbeat.play();
+} else {
+  heartbeat.pause();
+}
+);
